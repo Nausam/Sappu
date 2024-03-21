@@ -13,7 +13,7 @@ const CreateProduct = () => {
 
   const userId = sessionClaims?.userId as string;
 
-
+  console.log(sessionClaims);
 
   return (
     <>
