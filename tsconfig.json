@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "components/Canvas/Fin.jsx",
+    "app/events/create/page.jsx",
+    "components/Customizer/Tab.jsx",
+    "components/Customizer/ColorPicker.jsx",
+    "components/Customizer/FilePicker.jsx",
+    "components/Canvas/Backdrop.jsx",
+    "components/Canvas/CameraRig.jsx",
+    "components/Canvas/CanvasModal.jsx",
+    "app/(root)/shop/loading.tsx",
+    "app/(root)/product/customize/page.jsx"
+  ],
+  "exclude": ["node_modules"]
+}
