@@ -18,9 +18,9 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata: Metadata = {
-  title: "Home | Valsalva",
+  title: "Home | SAPPU",
   description:
-    "Welcome to Valsalva – your premier destination for all things snorkeling. Dive into elegance and explore our curated selection of top-quality snorkeling gear and equipment. Experience innovation like never before with our cutting-edge 3D fin customizer, allowing you to create personalized fins tailored to your unique style and preferences.",
+    " SAPPU is a modern, fast and reliable web application for your business. It is built with Next.js, Tailwind CSS, and TypeScript.",
   icons: {
     icon: "/asets/images/logo.png",
   },
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
-        <body className={cinzel.variable}>
+        <body className={ubuntu.variable}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
