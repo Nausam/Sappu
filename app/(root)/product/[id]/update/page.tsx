@@ -1,26 +1,26 @@
 import React from "react";
 import { Metadata } from "next";
 
-import ProductForm from "@/components/shared/ProductForm";
-import { getProductById } from "@/lib/actions/product.actions";
+import TournamentForm from "@/components/shared/TournamentForm";
+import { getTournamentById } from "@/lib/actions/tournament.actions";
 import { auth } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
-  title: "Update | Valsalva",
+  title: "Update | SAPPU",
 };
 
-type UpdateProductProps = {
+type UpdateTournamentProps = {
   params: {
     id: string;
   };
 };
 
-const UpdateProduct = async ({ params: { id } }: UpdateProductProps) => {
+const UpdateTournament = async ({ params: { id } }: UpdateTournamentProps) => {
   const { sessionClaims } = auth();
 
   const userId = sessionClaims?.userId as string;
 
-  const product = await getProductById(id);
+  const tournament = await getTournamentById(id);
 
   return (
     <>
@@ -31,15 +31,15 @@ const UpdateProduct = async ({ params: { id } }: UpdateProductProps) => {
       </section>
 
       <div className="wrapper my-8">
-        <ProductForm
+        <TournamentForm
           type="Update"
           userId={userId}
-          product={product}
-          productId={product._id}
+          tournament={tournament}
+          tournamentId={tournament._id}
         />
       </div>
     </>
   );
 };
 
-export default UpdateProduct;
+export default UpdateTournament;

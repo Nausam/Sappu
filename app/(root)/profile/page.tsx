@@ -9,56 +9,49 @@ import { IOrder } from "@/lib/database/models/order.model";
 import { SearchParamProps } from "@/types";
 import { auth } from "@clerk/nextjs";
 import Link from "next/link";
-import React from "react";
+import { Suspense } from "react";
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const metadata: Metadata = {
-  title: "Profile | Valsalva",
+  title: "Profile | SAPPU",
 };
 
 const ProfilePage = async ({ searchParams }: SearchParamProps) => {
   const { sessionClaims } = auth();
   const userId = sessionClaims?.userId as string;
 
-  const ordersPage = Number(searchParams?.ordersPage) || 1;
-  // const productsPage = Number(searchParams?.productsPage) || 1;
-
-  const orders = await getOrdersByUser({ userId, page: ordersPage });
-
-  const orderedProducts =
-    orders?.data.map((order: IOrder) => order.product) || [];
-
-  // const organizedProducts = await getProductsByUser({
-  //   userId,
-  //   page: productsPage,
-  // });
-
   return (
     <>
-      <section className="mt-20">
-        <div className="wrapper flex items-center justify-center sm:justify-between">
-          <h3 className="h3-bold text-center sm:text-left">Profile</h3>
+      <section className="wrapper mt-20">
+        <h3 className="h3-bold text-center sm:text-left">Profile</h3>
 
-          <Button
-            asChild
-            className="button hidden sm:flex bg-black border border-black hover:bg-transparent  hover:text-black dark:bg-white dark:text-black dark:hover:bg-transparent dark:hover:text-white dark:border-white font-bold w-full sm:w-fit transition-all duration-300 ease-in-out shadow-lg"
-            size="lg"
-          >
-            <Link href="/shop">Explore More</Link>
+        <div className="mt-5 flex items-center justify-center sm:justify-between">
+          <Tabs defaultValue="my-profile">
+            <TabsList className="dark:bg-lighteBlue_1">
+              <TabsTrigger value="my-profile">My Profile</TabsTrigger>
+              <TabsTrigger value="my-teams">My Teams</TabsTrigger>
+            </TabsList>
+            <TabsContent value="my-profile">
+              <Suspense
+                fallback={
+                  <div className="flex items-center justify-center">
+                    Loading...
+                  </div>
+                }
+              >
+                <h1>MY PROFILE PAGE</h1>
+              </Suspense>
+            </TabsContent>
+            <TabsContent value="my-teams">
+              <h1>MY TEAMS PAGE</h1>
+            </TabsContent>
+          </Tabs>
+
+          <Button asChild className="button-modern hover:bg-cyan-500" size="lg">
+            <Link href="/teams/create">Create Team</Link>
           </Button>
         </div>
-      </section>
-
-      <section className="wrapper my-8 items-center flex flex-col gap-8 md:gap-12">
-        <InventoryCollection
-          data={orderedProducts}
-          emptyTitle="No products purchased yet"
-          emptyStateSubtext="No worries - plenty of products to choose from!"
-          collectionType="My_Products"
-          limit={5}
-          page={ordersPage}
-          urlParamName="ordersPage"
-          totalPages={orders?.totalPages}
-        />
       </section>
     </>
   );

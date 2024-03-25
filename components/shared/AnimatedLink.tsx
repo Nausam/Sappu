@@ -32,12 +32,12 @@ export default AnimatedLink;
 const titleAnimations = {
   rest: {
     transition: {
-      staggerChildren: 0.009,
+      staggerChildren: 0.0001,
     },
   },
   hover: {
     transition: {
-      staggerChildren: 0.009,
+      staggerChildren: 0.0001,
     },
   },
 };

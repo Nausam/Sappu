@@ -1,42 +1,41 @@
 "use client";
 
-import LogoCanvas from "../Canvas/LogoCanvas";
 import { Suspense } from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="mt-20 nav-height relative">
-      <div className="wrapper h-5/6 grid grid-cols-1 gap-5 lg:grid-cols-2 2xl:gap-0">
-        <div className="flex flex-col justify-center gap-8 relative z-10">
-          <h1 className="h1-bold drop-shadow-md">
-            Discover Precision, Power, and Beauty Below.
-          </h1>
-
-          <p className="p-regular-20 md:p-regular-24 text-gray-700 dark:text-gray-300">
-            Dive into a World of Excellence: Unleashing Precision, Power, and
-            Unparalleled Performance in Every Fin!
-          </p>
-          <Button
-            asChild
-            className="button bg-black border border-black hover:bg-transparent text-white hover:text-black dark:bg-white dark:border-black dark:hover:border-white dark:text-black dark:hover:bg-transparent dark:hover:text-white rounded-sm font-bold w-full sm:w-fit transition-all duration-300 ease-in-out shadow-lg"
-            size="lg"
-          >
-            <Link href="/shop">Explore Now</Link>
-          </Button>
-        </div>
-      </div>
-      {/* <div className="wrapper w-full h-full">
-        <div className="flex items-center justify-center h-full relative">
-          <Suspense fallback={<div>Loading...</div>}>
-            <LogoCanvas />
-          </Suspense>
-        </div>
-        <h1 className="text-center absolute bottom-20 right-0 left-0 mx-auto items-center justify-center h1-bold2 drop-shadow-md">
-          Discover Precision, Power, and Beauty Below.
+    <section className="wrapper mt-28 relative">
+      <div className="w-full text-center">
+        <h1 className="h1 mb-6 max-w-5xl mx-auto">
+          <span className="text-cyan-500 drop-shadow-lg">Revolutionizing </span>
+          Maldivian Esports, Redefining Gaming Culture.
         </h1>
-      </div> */}
+
+        <p className="p-regular-18 md:p-regular-20 max-w-3xl mx-auto mb-6  lg:mb-8">
+          Connect, Compete, and Conquer with Our Mobile Gaming Community.
+        </p>
+
+        <div className="absolute md:-top-60 -top-[500px] right-0 lg:left-40 md:left-28 -left-32 bottom-0 bg-blue-500 h-[500px] w-[800px]  rounded-full blur-3xl opacity-10 -z-50"></div>
+
+        <Button asChild className="button-modern hover:bg-cyan-500" size="lg">
+          <Link href="/shop">Get Started</Link>
+        </Button>
+      </div>
+
+      <div className="flex w-full justify-center items-center">
+        <Suspense fallback={<div>Loading...</div>}>
+          <Image
+            src="/assets/images/hero.png"
+            width={850}
+            height={850}
+            alt="hero image"
+            className="mt-28"
+          />
+        </Suspense>
+      </div>
     </section>
   );
 };

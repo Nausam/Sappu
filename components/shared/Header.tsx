@@ -25,19 +25,19 @@ const Header = async () => {
   const isAdmin = user.userId !== null && admins.includes(user.userId);
 
   return (
-    <header className="w-full z-50 bg-opacity-10 md:bg-opacity-20 dark:bg-opacity-20 fixed top-0 backdrop-blur-md">
+    <header className="w-full z-50 bg-opacity-50 dark:bg-lighteBlue_1 dark:bg-opacity-75 fixed top-0 backdrop-blur-md bg-primary-50">
       <div className="wrapper flex items-center justify-between">
         <Link href="/" className="flex gap-2">
           <Image
-            src="/assets/images/logo_white.png"
-            width={20}
+            src="/assets/images/sappu_logo_no_text.png"
+            width={50}
             height={20}
             alt="valsalva logo"
             className="invert dark:invert-0"
           />
         </Link>
 
-        <nav className="md:flex-between mx-auto hidden w-full max-w-xs">
+        <nav className="md:flex-between mx-auto hidden w-full max-w-md">
           <NavItems />
 
           {/* {isAdmin && (
@@ -60,14 +60,14 @@ const Header = async () => {
           )} */}
 
           <SignedIn>
-            <Menubar className="ml-10 dark:bg-[#222222] dark:border-none dark:hover:bg-[#323232]">
+            <Menubar className="ml-5 dark:bg-lighteBlue_1 dark:border-lightBlue_2 dark:hover:bg-lightBlue_2">
               <MenubarMenu>
                 <MenubarTrigger className="cursor-pointer">
                   Admin
                 </MenubarTrigger>
-                <MenubarContent className="dark:bg-[#222222] dark:border-none">
+                <MenubarContent className="dark:bg-lighteBlue_1 dark:border-lightBlue_2">
                   <Link href="/admin">
-                    <MenubarItem className="dark:hover:bg-[#323232] hover:bg-primary-50 cursor-pointer">
+                    <MenubarItem className="dark:hover:bg-lightBlue_2 hover:bg-primary-50 cursor-pointer">
                       Dashboard
                     </MenubarItem>
                   </Link>

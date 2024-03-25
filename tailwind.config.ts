@@ -30,12 +30,16 @@ module.exports = withUt({
         },
 
         grey: {
-          600: "#545454", // Subdued - color name in figma
+          600: "#545454",
           500: "#757575",
-          400: "#AFAFAF", // Disabled - color name in figma
-          50: "#F6F6F6", // White Grey - color name in figma
+          400: "#AFAFAF",
+          50: "#F6F6F6",
         },
-        black: "#000000",
+        darkBlue_1: "#040e14",
+        darkBlue_2: "#05121b",
+        lighteBlue_1: "#071722",
+        lightBlue_2: "#0e2f44",
+        lightBlue_3: "#264356",
         white: "#FFFFFF",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

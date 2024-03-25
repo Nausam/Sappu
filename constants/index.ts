@@ -12,12 +12,16 @@ export const headerLinks = [
     route: "/",
   },
   {
-    label: "Customize",
-    route: "/product/65e9d07d684eaf43ce92ee67/custom",
+    label: "Tournaments",
+    route: "/tournaments",
   },
   {
-    label: "Shop",
-    route: "/shop",
+    label: "Leaderboard",
+    route: "/leaderboard",
+  },
+  {
+    label: "Explore",
+    route: "/explore",
   },
   {
     label: "Profile",
@@ -37,8 +41,19 @@ export const productDefaultValues = {
   description: "",
   imageUrl: "",
   categoryId: "",
-  price: "",
-  footPocketColor: "",
+  prizePool: "",
+  entryFee: "",
+  startDate: new Date(),
+  endDate: new Date(),
+};
+
+export const teamDefaultValues = {
+  name: "",
+  moto: "",
+  description: "",
+  imageUrl: "",
+  categoryId: "",
+  players: "",
 };
 
 export const EditorTabs = [

@@ -1,13 +1,19 @@
 import { Suspense } from "react";
+import { Metadata } from "next";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AllOrders from "@/components/shared/AllOrders";
-import CreateProduct from "@/components/shared/CreateProduct";
+import CreateTournament from "@/components/shared/CreateTournament";
+
+export const metadata: Metadata = {
+  title: "ADMIN | SAPPU",
+};
 
 const AdminPage = () => {
   return (
     <div className="wrapper mt-20">
       <Tabs defaultValue="orders">
-        <TabsList className="dark:bg-[#191919]">
+        <TabsList className="dark:bg-lighteBlue_1">
           <TabsTrigger value="orders">Orders</TabsTrigger>
           <TabsTrigger value="create">Create</TabsTrigger>
         </TabsList>
@@ -21,7 +27,7 @@ const AdminPage = () => {
           </Suspense>
         </TabsContent>
         <TabsContent value="create">
-          <CreateProduct />
+          <CreateTournament />
         </TabsContent>
       </Tabs>
     </div>

@@ -30,22 +30,22 @@ const ThemeButton = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        className="dark:bg-[#252525] shadow-lg dark:border dark:border-[#303030] cursor-pointer"
+        className="dark:bg-lighteBlue_1 shadow-lg dark:border dark:border-lightBlue_2 cursor-pointer"
       >
         <DropdownMenuItem
-          className="dark:hover:bg-[#303030] cursor-pointer"
+          className="dark:hover:bg-lightBlue_2 cursor-pointer"
           onClick={() => setTheme("light")}
         >
           Light
         </DropdownMenuItem>
         <DropdownMenuItem
-          className="dark:hover:bg-[#303030] cursor-pointer"
+          className="dark:hover:bg-lightBlue_2 cursor-pointer"
           onClick={() => setTheme("dark")}
         >
           Dark
         </DropdownMenuItem>
         <DropdownMenuItem
-          className="dark:hover:bg-[#303030] cursor-pointer"
+          className="dark:hover:bg-lightBlue_2 cursor-pointer"
           onClick={() => setTheme("system")}
         >
           System

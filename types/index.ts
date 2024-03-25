@@ -30,6 +30,46 @@ export type CreateProductParams = {
   path: string;
 };
 
+export type CreateTournamentParams = {
+  userId: string;
+  tournament: {
+    title: string;
+    description: string;
+    imageUrl: string;
+    categoryId: string;
+    prizePool: string;
+    entryFee: string;
+  };
+  path: string;
+};
+
+export type UpdateTournamentParams = {
+  userId: string;
+  tournament: {
+    _id: string;
+    title: string;
+    imageUrl: string;
+    description: string;
+    categoryId: string;
+    prizePool: string;
+    entryFee: string;
+  };
+  path: string;
+};
+
+export type CreateTeamParams = {
+  userId: string;
+  team: {
+    name: string;
+    moto: string;
+    description: string;
+    imageUrl: string;
+    categoryId: string;
+    players: string;
+  };
+  path: string;
+};
+
 export type UpdateProductParams = {
   userId: string;
   product: {
@@ -54,6 +94,12 @@ export type GetAllProductsParams = {
   limit: number;
   page: number;
 };
+export type GetAllTournamentsParams = {
+  query: string;
+  category: string;
+  limit: number;
+  page: number;
+};
 
 export type GetProductsByUserParams = {
   userId: string;
@@ -64,6 +110,12 @@ export type GetProductsByUserParams = {
 export type GetRelatedProductsByCategoryParams = {
   categoryId: string;
   productId: string;
+  limit?: number;
+  page: number | string;
+};
+export type GetRelatedTournamentsByCategoryParams = {
+  categoryId: string;
+  tournamentId: string;
   limit?: number;
   page: number | string;
 };

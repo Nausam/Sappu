@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import React from "react";
 
-import ProductForm from "@/components/shared/ProductForm";
+import ProductForm from "@/components/shared/TournamentForm";
 import { auth } from "@clerk/nextjs";
 
 export const metadata: Metadata = {

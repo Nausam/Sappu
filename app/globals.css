@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply dark:bg-darkBlue_1 bg-white;
+  }
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -86,7 +89,7 @@ body {
     hue-rotate(32deg) brightness(98%) contrast(92%);
 }
 
-/* ========================================== TAILWIND STYLES */
+/* ========================================== NEW TAILWIND STYLES */
 @layer utilities {
   .wrapper {
     @apply max-w-7xl lg:mx-auto p-5 md:px-10 xl:px-0 w-full;
@@ -94,6 +97,34 @@ body {
 
   .nav-height {
     @apply h-[calc(100vh-60px)];
+  }
+
+  .h1 {
+    @apply font-semibold text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem];
+  }
+
+  .h2 {
+    @apply text-[1.75rem] leading-[2.5rem] md:text-[2rem] md:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3.5rem] xl:text-[3rem] xl:leading-tight;
+  }
+
+  .h3 {
+    @apply text-[2rem] leading-normal md:text-[2.5rem];
+  }
+
+  .h4 {
+    @apply text-[2rem] leading-normal;
+  }
+
+  .h5 {
+    @apply text-2xl leading-normal;
+  }
+
+  .h6 {
+    @apply font-semibold text-lg leading-8;
+  }
+
+  .body-1 {
+    @apply text-[0.875rem] leading-[1.5rem] md:text-[1rem] md:leading-[1.75rem] lg:text-[1.25rem] lg:leading-8;
   }
 
   .common-padding {
@@ -222,27 +253,31 @@ body {
 
   /* SHADCN OVERRIDES */
   .select-field {
-    @apply w-full bg-grey-50 dark:text-white dark:bg-[#191919] h-[54px] placeholder:text-grey-500 rounded-sm p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent focus:ring-transparent !important;
+    @apply w-full bg-grey-50 dark:text-white dark:bg-darkBlue_2 h-[54px] placeholder:text-grey-500 rounded-sm p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent focus:ring-transparent !important;
   }
 
   .input-field {
-    @apply bg-grey-50 dark:bg-[#191919] h-[54px] focus-visible:ring-offset-0 placeholder:text-grey-500 rounded-sm p-regular-16 px-4 py-3 border-none focus-visible:ring-transparent !important;
+    @apply bg-grey-50 dark:bg-darkBlue_2 h-[54px] focus-visible:ring-offset-0 placeholder:text-grey-500 rounded-sm p-regular-16 px-4 py-3 border-none focus-visible:ring-transparent !important;
   }
 
   .textarea {
-    @apply bg-grey-50 dark:bg-[#191919] flex flex-1 placeholder:text-grey-500 p-regular-16 px-5 py-3 border-none rounded-sm focus-visible:ring-transparent !important;
+    @apply bg-grey-50 dark:bg-darkBlue_2 flex flex-1 placeholder:text-grey-500 p-regular-16 px-5 py-3 border-none rounded-sm focus-visible:ring-transparent !important;
   }
 
   .button {
     @apply h-[54px] p-medium-18;
   }
 
+  .button-modern {
+    @apply h-[54px] p-medium-18 dark:hover:bg-opacity-60 border border-cyan-500 dark:text-white hover:text-white text-black bg-transparent  dark:hover:bg-cyan-600 dark:hover:text-white dark:hover:shadow-2xl hover:shadow-2xl shadow-cyan-600 rounded-sm font-bold w-full sm:w-fit transition-all duration-500 ease-in-out shadow-sm;
+  }
+
   .select-item {
-    @apply py-3 cursor-pointer dark:bg-[#191919] focus:bg-primary-50;
+    @apply py-3 cursor-pointer dark:bg-darkBlue_2 focus:bg-primary-50;
   }
 
   .toggle-switch {
-    @apply bg-gray-300 dark:bg-[#191919] !important;
+    @apply bg-gray-300 dark:bg-darkBlue_2 !important;
   }
 }
 

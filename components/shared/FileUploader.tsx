@@ -48,7 +48,7 @@ export function FileUploader({
   return (
     <div
       {...getRootProps()}
-      className="flex-center bg-dark-3 h-64 flex p-3 cursor-pointer flex-col overflow-hidden rounded-sm bg-grey-50 dark:bg-[#191919]"
+      className="flex-center bg-dark-3 h-64 flex p-3 cursor-pointer flex-col overflow-hidden rounded-sm bg-grey-50 dark:bg-darkBlue_2"
     >
       <input {...getInputProps()} className="cursor-pointer" />
 
@@ -74,7 +74,7 @@ export function FileUploader({
           <p className="p-medium-12 mb-4">SVG, PNG, JPG</p>
           <Button
             type="button"
-            className="rounded-full dark:bg-[#252525] bg-gray-400 hover:bg-gray-500 dark:hover:bg-[#393939] text-white"
+            className="rounded-full dark:bg-lightBlue_2 bg-gray-400 hover:bg-gray-500 dark:hover:bg-lightBlue_3 text-white"
           >
             Select from computer
           </Button>
