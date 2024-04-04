@@ -18,7 +18,7 @@ const Hero = () => {
           Connect, Compete, and Conquer with Our Mobile Gaming Community.
         </p>
 
-        <div className="absolute md:-top-60 -top-[500px] right-0 lg:left-40 md:left-28 -left-32 bottom-0 bg-blue-500 h-[500px] w-[800px]  rounded-full blur-3xl opacity-10 -z-50"></div>
+        {/* <div className="absolute md:-top-60 -top-[500px] right-0 lg:left-40 md:left-28 -left-32 bottom-0 bg-blue-500 h-[500px] w-[800px]  rounded-full blur-3xl opacity-10 -z-50"></div> */}
 
         <Button asChild className="button-modern hover:bg-cyan-500" size="lg">
           <Link href="/shop">Get Started</Link>

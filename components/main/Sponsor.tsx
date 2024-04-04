@@ -62,7 +62,7 @@ const Sponsor = () => {
           />
         </div>
 
-        <div className="absolute lg:top-0 md:top-64 top-[500px] right-0 lg:left-96 md:left-48 left-0 bottom-0 bg-blue-500 h-[1000px] w-[800px]  rounded-full blur-3xl opacity-10 -z-50"></div>
+        {/* <div className="absolute lg:top-0 md:top-64 top-[500px] right-0 lg:left-96 md:left-48 left-0 bottom-0 bg-blue-500 h-[1000px] w-[800px]  rounded-full blur-3xl opacity-10 -z-50"></div> */}
 
         <div className="flex-col justify-center gap-8 mt-16 hidden lg:flex">
           <h2 className="h2-bold text-gray-800 dark:text-white text-start">
